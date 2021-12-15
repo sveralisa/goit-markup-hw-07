@@ -1,5 +1,16 @@
-/* ```````````````UTILS````````````` */
 @import "./utils/variables";
 @import "./utils/hidden";
 
-/* ````````````COMPONENTS````````````` */
+@import "./base/common";
+@import "./base/reset";
+
+@import "./components/modal";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/sections";
+@import "./layout/about";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/portfolio";

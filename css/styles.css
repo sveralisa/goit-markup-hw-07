@@ -588,6 +588,7 @@ ul {
   font-style: normal;
   margin-bottom: 9px;
 }
+/* ------footer-social------ */
 
 .footer-social {
   justify-content: center;
@@ -645,6 +646,7 @@ ul {
   justify-content: center;
   margin-left: 93px;
 }
+/* ------footer-sign-up------ */
 
 .sign-up-form {
   display: flex;
@@ -719,6 +721,7 @@ ul {
 }
 
 /* --------------------PORTFOLIO-------------------- */
+/* -------------menu------------- */
 
 .menu-list {
   display: flex;
@@ -756,6 +759,8 @@ ul {
   border-radius: 4px;
 }
 
+/* --------------------PORTFOLIO-------------------- */
+/* -------------products------------- */
 .portfolio {
   display: flex;
   flex-wrap: wrap;

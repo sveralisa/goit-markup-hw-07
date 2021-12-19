@@ -46,10 +46,9 @@
   align-items: center;
   justify-content: center;
   padding: 0px;
-}
-
-.team-social :last-child {
-  margin-right: 0px;
+    & :last-child {
+    margin-right: 0px;
+  }
 }
 
 .team-social-item {
@@ -83,12 +82,11 @@
   height: 20px;
   background-color: transparent;
   fill: currentColor;
+    & {
+    fill: var(--transition-time) var(--cubic);
+    fill: var(--icon-color);
+  }
 }
-.team-social-link-svg {
-  fill: var(--transition-time) var(--cubic);
-  fill: var(--icon-color);
-}
-
 .team-social-link-svg:hover,
 .team-social-link-svg:focus {
   fill: var(--first-button-color);

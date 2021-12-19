@@ -193,16 +193,16 @@ ul {
   padding-left: 42px;
 }
 
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+
 .input-icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
   transition: fill var(--transition-time) var(--cubic);
-}
-
-.modal-input:focus {
-  border-color: var(--accent-color);
 }
 
 .modal-input:focus + .input-icon {
@@ -320,8 +320,7 @@ ul {
   transition: color var(--transition-time) var(--cubic);
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:hover, .close-btn:focus {
   color: var(--accent-color);
 }
 
@@ -391,13 +390,6 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.header-link:hover,
-.header-link:focus {
-  transform: color;
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
 .header-link.current::after {
   content: "";
   position: absolute;
@@ -407,6 +399,13 @@ ul {
   height: 4px;
   background: var(--accent-color);
   border-radius: 2px;
+}
+
+.header-link:hover,
+.header-link:focus {
+  transform: color;
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .navigation-link {
@@ -435,8 +434,7 @@ ul {
   fill: currentColor;
 }
 
-.header-svg:hover,
-.header-svg:focus {
+.header-svg:hover, .header-svg:focus {
   fill: var(--accent-color);
 }
 
@@ -502,8 +500,7 @@ ul {
   background-color: var(--accent-color);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero-button:hover, .hero-button:focus {
   transform: background-color;
   background-color: var(--btn-hover);
 }
@@ -744,8 +741,7 @@ ul {
   color: #afb1b8;
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients-link:hover, .clients-link:focus {
   transform: border-color, color;
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -914,6 +910,7 @@ ul {
 }
 
 .sign-up-btn {
+  cursor: pointer;
   height: 50px;
   padding: 10px 29px;
   display: flex;
@@ -932,8 +929,7 @@ ul {
   transition: background-color var(--transition-time) var(--cubic);
 }
 
-.sign-up-btn:hover,
-.sign-up-btn:focus {
+.sign-up-btn:hover, .sign-up-btn:focus {
   background-color: var(--btn-hover);
 }
 
@@ -964,16 +960,15 @@ ul {
   padding: 6px 22px;
 }
 
-.menu-item {
-  margin-right: 8px;
-}
-
-.menu-button:hover,
-.menu-button:focus {
+.menu-button:hover, .menu-button:focus {
   background-color: var(--accent-color);
   color: var(--second-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+.menu-item {
+  margin-right: 8px;
 }
 
 .portfolio {
@@ -998,8 +993,7 @@ ul {
   transition: box-shadow var(--transition-time) var(--cubic);
 }
 
-.products-link:hover,
-.products-link:focus {
+.products-link:hover, .products-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -1020,6 +1014,11 @@ ul {
   color: #ffffff;
 }
 
+.products-overlay-text {
+  transform: translateY(100%);
+  transition: transform var(--transition-time) var(--cubic);
+}
+
 .products-overlay {
   position: absolute;
   width: 100%;
@@ -1029,8 +1028,7 @@ ul {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.products-overlay,
-.products-overlay-text {
+.products-overlay {
   transform: translateY(100%);
   transition: transform var(--transition-time) var(--cubic);
 }

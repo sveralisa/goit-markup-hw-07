@@ -58,12 +58,11 @@
   padding: 10px 32px;
   border: 1px solid transparent;
   background-color: var(--accent-color);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  transform: background-color;
-  background-color: var(--btn-hover);
+    &:hover,
+    &:focus {
+    transform: background-color;
+    background-color: var(--btn-hover);
+  }
 }
 
 .btn {

@@ -1,26 +1,26 @@
-.about {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 0;
 }
 
-.gallery {
+.gallery__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 
-.about-item {
+.gallery__item {
   mix-blend-mode: normal;
 }
 
-.about-thumb {
+.gallery__thumb {
   position: relative;
 }
 
-.about-box {
+.gallery__box {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -32,7 +32,7 @@
   background: rgba(47, 48, 58, 0.8);
 }
 
-.about-text {
+.gallery__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;

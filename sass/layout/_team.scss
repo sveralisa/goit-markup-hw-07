@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   padding: 0px;
-    & :last-child {
+  & :last-child {
     margin-right: 0px;
   }
 }
@@ -66,12 +66,13 @@
   justify-content: center;
   display: block;
   color: #afb1b8;
+  &:hover,
+  &:focus {
+    color: var(--first-button-color);
+    background-color: var(--accent-color);
+  }
 }
-.team-social-link:hover,
-.team-social-link:focus {
-  color: var(--first-button-color);
-  background-color: var(--accent-color);
-}
+
 .team-social-link:hover .team-social-link-svg,
 .team-social-link:focus .team-social-link-svg {
   transform: fill;
@@ -82,12 +83,12 @@
   height: 20px;
   background-color: transparent;
   fill: currentColor;
-    & {
+  & {
     fill: var(--transition-time) var(--cubic);
     fill: var(--icon-color);
   }
-}
-.team-social-link-svg:hover,
-.team-social-link-svg:focus {
-  fill: var(--first-button-color);
+  &:hover,
+  &:focus {
+    fill: var(--first-button-color);
+  }
 }

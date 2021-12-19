@@ -1,4 +1,4 @@
-.section-title {
+.section__title {
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -8,12 +8,7 @@
   color: var(--primary-text-color);
 }
 
-.icon-main {
-  display: flex;
-  justify-content: space-between;
-}
-
-.svg-bg {
+.description__svg-bg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,20 +19,20 @@
   border-radius: 4px;
 }
 
-.svg-main {
+.description__svg {
   display: flex;
   width: 70px;
   height: 70px;
 }
 
-.description {
+.description__list {
   display: flex;
   align-items: center;
   text-align: left;
   justify-content: space-between;
 }
 
-.description-item {
+.description__item {
   width: 270px;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -45,7 +40,7 @@
   margin-right: 30px;
 }
 
-.description-title {
+.description__title {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
@@ -55,6 +50,6 @@
   color: var(--primary-text-color);
 }
 
-.description-text {
+.description__text {
   line-height: 1.71;
 }

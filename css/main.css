@@ -145,7 +145,7 @@ ul {
   border-radius: 4px;
 }
 
-.modal-title {
+.modal__title {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
@@ -155,20 +155,36 @@ ul {
   color: var(--primary-text-color);
 }
 
-.modal-form-field {
+.modal-form__field {
   margin-bottom: 10px;
 }
 
-.modal-form-field:nth-child(4n) {
+.modal-form__field:nth-child(4n) {
   margin-bottom: 18px;
 }
 
-.modal-form-field:nth-child(5n) {
+.modal-form__field:nth-child(5n) {
   margin-bottom: 32px;
 }
 
-.modal-input,
-.feedback-txt {
+.input__title {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--link-color);
+}
+
+.modal-input__wrap {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.modal__input,
+.feedback__txt {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -180,24 +196,18 @@ ul {
   cursor: pointer;
 }
 
-.modal-input-wrap {
-  position: relative;
-  width: 100%;
-  height: 40px;
-}
-
-.modal-input {
+.modal__input {
   width: 100%;
   height: 40px;
   padding-right: 10px;
   padding-left: 42px;
 }
 
-.modal-input:focus {
+.modal__input:focus {
   border-color: var(--accent-color);
 }
 
-.input-icon {
+.input__icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -205,39 +215,29 @@ ul {
   transition: fill var(--transition-time) var(--cubic);
 }
 
-.modal-input:focus + .input-icon {
+.modal__input:focus + .input__icon {
   fill: var(--accent-color);
 }
 
-.input-title {
-  display: block;
-  text-align: left;
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: var(--link-color);
-}
-
-.feedback-txt {
+.feedback__txt {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
   resize: none;
 }
 
-.feedback-txt:focus {
+.feedback__txt:focus {
   border-color: var(--accent-color);
 }
 
-.feedback-txt::placeholder {
+.feedback__txt::placeholder {
   font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.terms-check {
+.terms__check {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -247,7 +247,7 @@ ul {
   color: var(--link-color);
 }
 
-.terms-check span {
+.terms__check span {
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
@@ -257,21 +257,21 @@ ul {
   margin-right: 6px;
 }
 
-.icon-check {
+.icon__check {
   fill: transparent;
   transition: fill var(--transition-time) var(--cubic);
 }
 
-.modal-check:checked + .terms-check span {
+.modal__check:checked + .terms__check span {
   background-color: var(--accent-color);
   border: none;
 }
 
-.modal-check:checked + .terms-check span .icon-check {
+.modal__check:checked + .terms__check span .icon__check {
   fill: var(--second-text-color);
 }
 
-.terms-link {
+.terms__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -280,7 +280,7 @@ ul {
   color: var(--accent-color);
 }
 
-.submit-btn {
+.submit__btn {
   display: flex;
   margin: auto auto;
   padding: 10px 55px;
@@ -299,12 +299,11 @@ ul {
   transition: background-color var(--transition-time) var(--cubic);
 }
 
-.submit-btn:hover,
-.submit-btn:focus {
+.submit__btn:hover, .submit__btn:focus {
   background-color: var(--btn-hover);
 }
 
-.close-btn {
+.modal-close__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -320,11 +319,11 @@ ul {
   transition: color var(--transition-time) var(--cubic);
 }
 
-.close-btn:hover, .close-btn:focus {
+.modal-close__btn:hover, .modal-close__btn:focus {
   color: var(--accent-color);
 }
 
-.close-icon {
+.modal-close__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -379,7 +378,19 @@ ul {
   color: var(--primary-text-color);
 }
 
-.header-link {
+.header__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 93px;
+}
+
+.header__item {
+  align-items: center;
+  padding-right: 50px;
+}
+
+.header__link {
   transition: color var(--transition-time) var(--cubic);
   position: relative;
   display: flex;
@@ -390,7 +401,7 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.header-link.current::after {
+.header__link.current::after {
   content: "";
   position: absolute;
   bottom: -32px;
@@ -401,46 +412,32 @@ ul {
   border-radius: 2px;
 }
 
-.header-link:hover,
-.header-link:focus {
+.header__link:hover, .header__link:focus {
   transform: color;
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.navigation-link {
+.navigation__link {
   transition: color var(--transition-time) var(--cubic);
   display: flex;
   margin-right: 30px;
   color: var(--link-color);
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: 93px;
-}
-
-.header-svg {
+.navigation__svg {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.header-svg:hover, .header-svg:focus {
+.navigation__svg:hover, .navigation__svg:focus {
   fill: var(--accent-color);
-}
-
-.header-item {
-  align-items: center;
-  padding-right: 50px;
 }
 
 .hero {
@@ -469,7 +466,7 @@ ul {
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   text-transform: uppercase;
   margin: 0 auto 30px;
@@ -481,7 +478,7 @@ ul {
   letter-spacing: 0.06em;
 }
 
-.hero-button {
+.hero__button {
   transition: background-color var(--transition-time) var(--cubic);
   min-width: 200px;
   height: 50px;
@@ -500,7 +497,7 @@ ul {
   background-color: var(--accent-color);
 }
 
-.hero-button:hover, .hero-button:focus {
+.hero__button:hover, .hero__button:focus {
   transform: background-color;
   background-color: var(--btn-hover);
 }
@@ -515,7 +512,7 @@ ul {
   border-radius: 4px;
 }
 
-.section-title {
+.section__title {
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -525,12 +522,7 @@ ul {
   color: var(--primary-text-color);
 }
 
-.icon-main {
-  display: flex;
-  justify-content: space-between;
-}
-
-.svg-bg {
+.description__svg-bg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,20 +533,20 @@ ul {
   border-radius: 4px;
 }
 
-.svg-main {
+.description__svg {
   display: flex;
   width: 70px;
   height: 70px;
 }
 
-.description {
+.description__list {
   display: flex;
   align-items: center;
   text-align: left;
   justify-content: space-between;
 }
 
-.description-item {
+.description__item {
   width: 270px;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -562,7 +554,7 @@ ul {
   margin-right: 30px;
 }
 
-.description-title {
+.description__title {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
@@ -572,7 +564,7 @@ ul {
   color: var(--primary-text-color);
 }
 
-.description-text {
+.description__text {
   line-height: 1.71;
 }
 
@@ -691,8 +683,7 @@ ul {
   color: #afb1b8;
 }
 
-.team-social-link:hover,
-.team-social-link:focus {
+.team-social-link:hover, .team-social-link:focus {
   color: var(--first-button-color);
   background-color: var(--accent-color);
 }
@@ -715,8 +706,7 @@ ul {
   fill: var(--icon-color);
 }
 
-.team-social-link-svg:hover,
-.team-social-link-svg:focus {
+.team-social-link-svg:hover, .team-social-link-svg:focus {
   fill: var(--first-button-color);
 }
 
@@ -861,11 +851,11 @@ ul {
   margin-left: 93px;
 }
 
-.sign-up-form {
+.sign-up__form {
   display: flex;
 }
 
-.sign-up-title {
+.sign-up__title {
   display: flex;
   margin-bottom: 20px;
   font-weight: 700;
@@ -876,7 +866,7 @@ ul {
   color: var(--second-text-color);
 }
 
-.sign-up-input {
+.sign-up__input {
   cursor: pointer;
   width: 358px;
   height: 50px;
@@ -891,7 +881,7 @@ ul {
   transition: border-color var(--transition-time) var(--cubic);
 }
 
-.sign-up-input::placeholder {
+.sign-up__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   display: flex;
@@ -901,15 +891,15 @@ ul {
   transition: color var(--transition-time) var(--cubic);
 }
 
-.sign-up-input:focus {
+.sign-up__input:focus {
   border-color: var(--accent-color);
 }
 
-.sign-up-input:focus::placeholder {
+.sign-up__input:focus:focus::placeholder {
   color: var(--second-text-color);
 }
 
-.sign-up-btn {
+.sign-up__btn {
   cursor: pointer;
   height: 50px;
   padding: 10px 29px;
@@ -929,11 +919,11 @@ ul {
   transition: background-color var(--transition-time) var(--cubic);
 }
 
-.sign-up-btn:hover, .sign-up-btn:focus {
+.sign-up__btn:hover, .sign-up__btn:focus {
   background-color: var(--btn-hover);
 }
 
-.sign-up-icon {
+.sign-up__icon {
   margin-left: 10px;
   fill: var(--second-text-color);
 }

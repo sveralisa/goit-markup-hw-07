@@ -29,7 +29,7 @@
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   text-transform: uppercase;
   margin: 0 auto 30px;
@@ -41,7 +41,7 @@
   letter-spacing: 0.06em;
 }
 
-.hero-button {
+.hero__button {
   transition: background-color var(--transition-time) var(--cubic);
   min-width: 200px;
   height: 50px;
@@ -58,8 +58,8 @@
   padding: 10px 32px;
   border: 1px solid transparent;
   background-color: var(--accent-color);
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     transform: background-color;
     background-color: var(--btn-hover);
   }
